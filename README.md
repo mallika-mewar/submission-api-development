@@ -16,13 +16,14 @@
 
   Finally, there are some indentation errors: 
 
-    * The statements in lines 16-19 are indented too far. In general the beginning of a python statement can only be indented more than that of the previous statement if it is the beginning of a loop-body if the body of a conditional. In this case the first 12 spaces of each of the lines needs to be removed.
-    * The same applies to lines 39-42
-    * The statements in lines 45 and 46, however, are not indented enough and 4 more spaces at the beginning should be added 
+  * The statements in lines 16-19 are indented too far. In general the beginning of a python statement can only be indented more than that of the previous statement if it is the beginning of a loop-body if the body of a conditional. In this case the first 12 spaces of each of the lines needs to be removed.
+  * The same applies to lines 39-42
+  * The statements in lines 45 and 46, however, are not indented enough and 4 more spaces at the beginning should be added 
 
-    (iii).
+  (iii).
 
-      1. The snippet is correct
-      2. The snippet is incorrect: there is a superfluous round closing brace in that line.
-      3. The snippet is incorrect: the `id` that is passed as a parameter in line 4 is undefined. The intention was probably to get the `id` from the url but that does not happen here.
+    1. The snippet is correct
+    2. The snippet is incorrect: there is a superfluous round closing brace in that line.
+    3. The snippet is incorrect: the `id` that is passed as a parameter in line 4 is undefined. The intention was probably to get the `id` from the url but that does not happen here.
+  
   
