@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Comment;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Log;
+use Session;
 
 class CommentController extends Controller
 {
@@ -27,11 +30,14 @@ class CommentController extends Controller
      */
     public function store(Request $request)
     {
-      $comment = new Comment;
-      $comment->name = $request->name;
-      $comment->message = $request->message;
-      $comment->Save();       
-      return response(200);
+      if(Auth::check() && $this->isStudent()) {
+        $comment = new Comment;
+        $comment->name = $request->name;
+        $comment->message = $request->message;
+        $comment->Save();       
+        return response(200);
+      }
+      return response(Session::get('bla'));
     }
 
     /**
@@ -54,10 +60,12 @@ class CommentController extends Controller
      */
     public function update(Request $request, Comment $comment)
     {
-      $comment->name = $request->name;
-      $comment->message = $request->message;
-      $comment->Save();
-      return response($comment->toJson(),200);
+      if(Auth::check() && $this->isStudent()) {
+        $comment->name = $request->name;
+        $comment->message = $request->message;
+        $comment->Save();
+        return response($comment->toJson(),200);
+      }
     }
 
     /**
@@ -68,7 +76,16 @@ class CommentController extends Controller
      */
     public function destroy(Comment $comment)
     {
-      $comment->delete();
-      return response(200);
+      if(Auth::check() && $this->isAdmin()) {
+        $comment->delete();
+        return response(200);
+      }
+      return response(401);
+    }
+    private function isAdmin() {
+      return Auth::user()->role == 'manager';
+    }
+    private function isStudent() {
+      return Auth::user()->role == 'client';
     }
 }
