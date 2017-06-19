@@ -1,0 +1,29 @@
+{
+    "__meta__": {
+        "about": "HTTPie session file", 
+        "help": "https://httpie.org/docs#sessions", 
+        "httpie": "0.9.8"
+    }, 
+    "auth": {
+        "password": null, 
+        "type": null, 
+        "username": null
+    }, 
+    "cookies": {
+        "XSRF-TOKEN": {
+            "expires": 1497616098, 
+            "path": "/", 
+            "secure": false, 
+            "value": "eyJpdiI6IjQ2SWRQTlV3SitHcElCcnVmZ0pcL1dBPT0iLCJ2YWx1ZSI6Ilp1UUk4amRTWDFlVldnQmNiNHdxUytocFJZYWVXN2oya1V1UkdJeGU3OG0wVGhmTHFJSWloSTR6aVVvYnpUNGg0UitlU21WK3F4UzlIQTFJQ3FmZ3BRPT0iLCJtYWMiOiI5ZTYwNWY0ZWNkMTA3MzAyYmM5MWUwYjg4ZDBmNGRhYzA4YjhjNmM1N2RjNmFiNjExMWIxOTc0MDVmMjQwOWFiIn0%3D"
+        }, 
+        "laravel_session": {
+            "expires": 1497616098, 
+            "path": "/", 
+            "secure": false, 
+            "value": "eyJpdiI6Ing2Q09LTHZkSmdFVmlhYmxwZTRaVHc9PSIsInZhbHVlIjoiQ0MyWG5uMDhaQTFFOUZUaUtkQStMbEZHMmhPQVBOdUR1YTZKQlhiViszY3V2MmVHQ2RYeHI0WUhEbTUrMEVqN2VORVwvY3IweWFhN3FLYjVkSU43ZmZRPT0iLCJtYWMiOiI0ZDU3YTE4MGU1OTcxZmIwNWUxY2Y3ZGFhYTgyYzJjZDI4MDVkZTc5NTU0N2FkMzI0OWRhMzIxZTY0YWQyNTg4In0%3D"
+        }
+    }, 
+    "headers": {
+        "Accept": "application/json, */*"
+    }
+}
