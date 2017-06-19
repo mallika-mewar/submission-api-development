@@ -11,7 +11,8 @@
 
 ### (b)
 
-  (i). TODO
+  (i). We have not yet completed this task.
+
   (ii). It is quite difficult to tell from the provided code which of the mistakes we are supposed to find. For example, in provided file, the `app` object is never created properly, nor is the `Flask` function that would be used to do so even imported. Similarly, the global `request` object, the `json_response` annotation, the `db_session` and the `Comment` class are never defined anywhere. The obvious solution to these problems is to import the required definitions, properly setup and configure the application and implement the `Comment` class (possibly with the help of SQLAlchemy). Furthermore, the `json_response` annotation throws an error when used without parameters. Using `as_json` instead solves the problem at least in our development environment. This highlights the **most important error**: Neither the python version, nor the version of the packages to be used are specified anywhere.
 
   Finally, there are some indentation errors: 
@@ -30,4 +31,8 @@
 
 ## Question 2
 
-  TODO See folder `SpringUsers`
+  See folder `SpringUsers`
+
+## Question 3 
+
+(a) See folder WebTechCommentManagement
