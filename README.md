@@ -6,8 +6,11 @@
 ### (a)
 
   (i). This request inserts a new comment.
-  (ii). This request changes an existing comment
-  (iii). This request deletes an existing comment
+  
+  (ii). This request changes an existing comment.
+  
+  (iii). This request deletes an existing comment.
+  
 
 ### (b)
 
@@ -35,6 +38,6 @@
 
 ## Question 3 
 
-(a) See folder WebTechCommentManagement
+(a) See folder `WebTechCommentManagement`
 
-(b) See folder laravel-auth
+(b) See folder `laravel-auth`
