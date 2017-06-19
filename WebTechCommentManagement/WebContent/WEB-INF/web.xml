@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+	xmlns = "http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation = "http://java.sun.com/xml/ns/javaee
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id = "WebApp_ID" version = "3.0">
+	<display-name>Comment Management</display-name>
+	<servlet>
+		<servlet-name>Jersey RESTful Application</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>jersey.config.server.provider.packages</param-name>
+			<param-value>com.tutorialspoint</param-value>
+		</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Jersey RESTful Application</servlet-name>
+		<url-pattern>/rest/*</url-pattern>
+	</servlet-mapping>
+	
+	<security-constraint>
+      <web-resource-collection>
+         <web-resource-name>comment creation or update</web-resource-name>
+         <url-pattern>/rest/CommentService/*</url-pattern>
+         <http-method>POST</http-method>
+         <http-method>PUT</http-method>
+      </web-resource-collection>
+      <auth-constraint>
+         <role-name>client</role-name>
+      </auth-constraint>
+    </security-constraint>
+    
+    <security-constraint>
+      <web-resource-collection>
+         <web-resource-name>delete comment</web-resource-name>
+         <url-pattern>/rest/CommentService/*</url-pattern>
+         <http-method>DELETE</http-method>
+      </web-resource-collection>
+      <auth-constraint>
+         <role-name>manager</role-name>
+      </auth-constraint>
+    </security-constraint>
+
+    <login-config>
+        <auth-method>BASIC</auth-method>
+        <realm-name>jaxrs</realm-name>
+    </login-config>
+
+    <security-role>
+        <role-name>manager</role-name>
+    </security-role>
+    
+     <security-role>
+        <role-name>client</role-name>
+    </security-role>
+	
+</web-app>
